@@ -1,0 +1,194 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 2px 0px 30px #000000;
+    background: linear-gradient(to right, #399dc5, #60bbdf);
+
+}
+.nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1014px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+.menu {
+   display: flex;
+   background: linear-gradient(to right, #07184798, #60bbdf);
+   flex-direction: column;
+   position: fixed;
+   justify-content: space-between;  
+   top: 60px;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   width: 22%;
+   align-items: flex-start;
+   box-shadow: 0px 10px 25px 0px #000000f6;
+   overflow-y: auto; 
+}
+.menu::-webkit-scrollbar {
+    width: 10px;
+}
+.menu::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+.menu__lista{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.menu__link{
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+    font-weight: 700;
+    text-decoration: none;
+}
+.btn{
+    background-color: transparent;
+    border: none;
+    padding: .75em 1.2em;
+    cursor: pointer;
+}
+
+.btn_resumen{
+    background-color: transparent;
+    color: rgba(38, 0, 255, 0.658);
+    font-weight: 1000;
+    width: min-content;
+    text-decoration-style: double;
+    font-size: 20px;
+
+}
+.btn_resumen:hover{
+    color: rgba(245, 6, 6, 0.767);
+    transition: .5s;
+}
+.menu__link:hover{
+    color: bisque;
+    opacity: .100;
+}
+
+.hidden{
+    display: none;
+}
+@media (max-width: 768px) {
+    .menu{
+        border-top-right-radius: 90%;
+        background: linear-gradient(to right, #07184798, #60bbdf);
+        flex-direction: column;
+        justify-content: space-evenly;        
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: -100%;
+        bottom: 0;
+        width: 75%;
+        transition: left .5s;
+        box-shadow: none;
+        align-items: flex-start;
+    }
+    .object{
+        display: none;
+    }
+    .btn_cerrar{
+        background-color: transparent;
+        color: aquamarine;
+        position: absolute;
+        top: 10px;
+        font-size: 28px;
+        width: 48px;
+        height: 48px;
+        padding: .5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn_cerrar:hover{
+        opacity: .100;
+    }
+    .btn_resumen{
+        background-color: transparent;
+        color: rgba(38, 0, 255, 0.658);
+        font-weight: 700;
+        width: min-content;
+        text-decoration-style: double;
+        font-size: 20px;
+    }
+    .btn_resumen:hover{
+        color: rgba(245, 6, 6, 0.767);
+        transition: .5s;
+    }
+    .show_menu{
+        left: 0;
+    }
+    .btn_abrir {
+        background: linear-gradient(to right, #0b3eca, #60bbdfc4);
+        color: aquamarine;
+        position: fixed;
+        bottom: 20px;
+        left: -40px;
+        font-size: 30px;
+        width: .0px;
+        height: 90px;
+        padding: 1em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .btn_abrir.hidden {
+        display: none;
+    }
+    
+    .btn_abrir:hover {
+        background-color: rgba(255, 0, 0, 0.993);
+        transition: background-color 0.3s;
+    }
+    .menu__lista{
+        flex-direction: column;
+        gap: 40px;
+        justify-content: space-between;
+        list-style: none;
+        padding: 2px;
+        padding-top: 60px;
+        margin: 10px;
+    }
+    .menu__link{
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        font-weight: 1000;
+        text-decoration: none;
+
+    }
+    .menu__link:hover{
+        color: bisque;
+        opacity: .100;
+
+    }
+}
+@media (min-width: 769px) {
+    .btn_cerrar, .btn_abrir{
+        display: none;
+    }
+}
+@media (min-height: 600px){
+    .menu {
+        justify-content: space-evenly;  
+        overflow-y: auto; 
+     }
+}
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <meta name="descripcion" content="Este es mi portafolio personal">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="autor" content="David Vaneagas">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script>src="script/index.js"</script>
+    </head>
+  <body>
+    <header class="header">
+      <nav class="nav contenedor">
+        <!-- Esta es una representacion, si tiene el modo oscuro(se respresenta con una img de la noche) o si tiene el modo claro (se representa con una img de el dia) -->
+        <div id="object" class="object object_show">
+ <!--          <a href="/" id="Dia"class="object">
+            <img class="img_mode" src="img/dia.png" alt="Dia">
+          </a>
+          <a href="/" id="Noche" class="object">
+            <img class="img_mode" src="img/noche.png" alt="Noche"> -->
+          </a>
+        </div>
+        <!--Cambio de idioma-->
+        <div id="Language" class="language">
+          <button class = "btn btn_languages" aria-label="cambiar_idioma" onclick="changeLanguage()">ENG</button>
+          <button class = "btn btn_language hidden" aria-label="cambiar_idioma"
+          onclick="changeLanguage()">ESP</button>
+        </div>
+        <!-- Logo -->
+        <div>  
+          <a href="/" class="logo">
+            <img class="imglogo" src="img/Logo.png" alt="MI LOGO">
+          </a>
+          <a href="/" class="logo">
+            <img class="imglogo" src="img/logo_dark.png" alt="MI LOGO">
+          </a>    
+        </div>
+        <!-- modo oscuro / claro -->
+        <div id="modes" class="modes">
+          <button id="dark_mode" class = "btn btn_mode" aria-label="cambiar_modo" onclick="changemodes('dark_mode')">
+            <i class='bx bxs-yin-yang'></i>
+          </button>
+          <button id="light_mode" class = "btn btn_mode" aria-label="cambiar_modo"  onclick="changemodes('light_mode')"><i class='bx bxs-yin-yang'></i>
+          </button>
+        </div>             
+        <!-- menu --> 
+        <div id="menu" class="menu">
+          <button type="button" onclick="closeMenu()" id="btncerrar"class = "btn btn_cerrar" aria-label="Cerrar">
+            <i class='bx bx-chevron-left'></i>
+          </button>
+            <ul class="menu__lista">
+              <li class="menu__info">
+                <a href="#" class="menu__link">Inicio</a>
+              </li>
+              <li class="menu__info">
+                <a href="#" class="menu__link">Sobre mi</a>
+              </li>                    
+              <li class="menu__info">
+                <a href="#" class="menu__link">Habilidades</a>
+              </li>
+              <li class="menu__info">
+                <a href="#" class="menu__link">Certificados</a>
+              </li>
+              <li class="menu__info">
+                <a href="#" class="menu__link">Contacto</a>
+              </li>
+            </ul>
+            <a href="#" class="btn btn_resumen">RESUMEN</a>
+        </div>
+        <button type="button" onclick="openMenu()" id="btnabrir" class = "btn btn_abrir" aria-label="Abrir">
+          <i class='bx bx-chevron-right'></i>
+        </button>
+      </nav>
+    </header>
+    <!-- Javascript-->
+    <script src="index.js"></script>
+          <br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b  r><br><br><br><br><br><br><br>
+
+
+  </body>
+</html>
