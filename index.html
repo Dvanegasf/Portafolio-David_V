@@ -8,77 +8,274 @@
     <link rel="stylesheet" href="/css/style.css">
     <meta name="autor" content="David Vaneagas">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <script>src="script/index.js"</script>
     </head>
-  <body>
+  <body class="dark">
     <header class="header">
       <nav class="nav contenedor">
         <!-- Esta es una representacion, si tiene el modo oscuro(se respresenta con una img de la noche) o si tiene el modo claro (se representa con una img de el dia) -->
         <div id="object" class="object object_show">
- <!--          <a href="/" id="Dia"class="object">
-            <img class="img_mode" src="img/dia.png" alt="Dia">
-          </a>
-          <a href="/" id="Noche" class="object">
-            <img class="img_mode" src="img/noche.png" alt="Noche"> -->
-          </a>
+            <img id="imgMode" class="img_mode" src="img/dia.jpg" alt="Modo">
         </div>
-        <!--Cambio de idioma-->
+        <!--Cambio de idioma no funcional-->
         <div id="Language" class="language">
-          <button class = "btn btn_languages" aria-label="cambiar_idioma" onclick="changeLanguage()">ENG</button>
-          <button class = "btn btn_language hidden" aria-label="cambiar_idioma"
-          onclick="changeLanguage()">ESP</button>
+          <button class = "btn btn_languages" aria-label="cambiar_idioma">
+            <a href="indexEN.html">ENG</a></button>
         </div>
         <!-- Logo -->
         <div>  
           <a href="/" class="logo">
-            <img class="imglogo" src="img/Logo.png" alt="MI LOGO">
-          </a>
-          <a href="/" class="logo">
-            <img class="imglogo" src="img/logo_dark.png" alt="MI LOGO">
+            <img id="imglogo" class="img_logo" src="img/logo_dark.png" alt="MI LOGO">
           </a>    
         </div>
         <!-- modo oscuro / claro -->
         <div id="modes" class="modes">
-          <button id="dark_mode" class = "btn btn_mode" aria-label="cambiar_modo" onclick="changemodes('dark_mode')">
-            <i class='bx bxs-yin-yang'></i>
-          </button>
-          <button id="light_mode" class = "btn btn_mode" aria-label="cambiar_modo"  onclick="changemodes('light_mode')"><i class='bx bxs-yin-yang'></i>
+          <button id="btnMode" class = "btn btn_mode" aria-label="cambiar_modo">
+          <i class='bx bxs-yin-yang'></i>
           </button>
         </div>             
         <!-- menu --> 
         <div id="menu" class="menu">
-          <button type="button" onclick="closeMenu()" id="btncerrar"class = "btn btn_cerrar" aria-label="Cerrar">
+          <button type="button" id="btnCerrar"class = "btn btn_cerrar" aria-label="Cerrar">
             <i class='bx bx-chevron-left'></i>
           </button>
             <ul class="menu__lista">
               <li class="menu__info">
-                <a href="#" class="menu__link">Inicio</a>
+                <a href="#hero" class="menu__link activo">Inicio</a>
               </li>
               <li class="menu__info">
-                <a href="#" class="menu__link">Sobre mi</a>
+                <a href="#sobre_Mi" class="menu__link">Sobre mi</a>
               </li>                    
               <li class="menu__info">
-                <a href="#" class="menu__link">Habilidades</a>
+                <a href="#habilidades" class="menu__link">Habilidades</a>
               </li>
               <li class="menu__info">
-                <a href="#" class="menu__link">Certificados</a>
+                <a href="#projects" class="menu__link">Proyectos</a>
               </li>
               <li class="menu__info">
-                <a href="#" class="menu__link">Contacto</a>
+                <a href="#contact" class="menu__link">Contacto</a>
               </li>
             </ul>
             <a href="#" class="btn btn_resumen">RESUMEN</a>
         </div>
-        <button type="button" onclick="openMenu()" id="btnabrir" class = "btn btn_abrir" aria-label="Abrir">
+        <button type="button" id="btnAbrir" class = "btn btn_abrir" aria-label="Abrir">
           <i class='bx bx-chevron-right'></i>
         </button>
       </nav>
     </header>
+    <main class="main">
+      <section id="hero" class="section hero">
+        <div class='container hero__container'>
+
+        <div class="hero__content-img">
+          <img src='img/profile.jpg' class="hero_img" alt='profile'>
+        </div>
+        <div class="hero__content-body">
+          <h1 class="hero__title">Hola, <span class="hero__animation">👋🏻</span> soy <br> <span class="hero__name">DAVID</span></h1>
+        </div>
+
+            <p class="hero__description">
+              <span id="typing"></span>
+            </p>
+
+            <ul class='social'>
+              <li class='social__item'>
+                <a href='#' class='social__link' aria-label="linkedin">
+                  <i class='bx bxl-linkedin'></i>
+                </a>
+              </li>
+              <li class='social__item'>
+                <a href='#' class='social__link' aria-label="github">
+                  <i class='bx bxl-github'></i>
+                </a>
+              </li>
+              <li class='social__item'>
+                <a href='#' class='social__link' aria-label="twitter">
+                  <i class='bx bxl-twitter'></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+      <section id="sobre_Mi" class="section sobre_Mi">
+        <div id="contenedor">
+          <h2 class="section section__title">Sobre mi</h2>
+          <div class='about__content'>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi incidunt, alias facere mollitia excepturi distinctio non eius beatae quia tenetur illum neque tempore reprehenderit molestiae nisi! Magnam eaque eos ducimus?</p>
+
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint, eum consequatur eveniet eligendi enim accusantium, dolore ullam numquam ipsa iusto voluptas amet veritatis corporis dolores beatae quam ex quos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades"class="section habilidades">
+        <div class="contenedor">
+          <h2 class="section section__title">Habilidades</h2>
+
+          <div class='habilidades__content'>
+            <div class="habilidades__container">
+              <div class='habilidades__card'>
+                <div class="habilidades__icon">
+                  <img src='icons/html.svg' alt='html'>
+                </div>
+                <span class="habilidades__text">HTML</span>
+              </div>
+              <div class='habilidades__card'>
+                <div class="habilidades__icon">
+                  <img src='icons/css.svg' alt='html'>
+                </div>
+                <span class="habilidades__text">CSS</span>
+              </div>
+
+              <div class='habilidades__card'>
+                <div class="habilidades__icon">
+                  <img src='icons/javascript.svg' alt='html'>
+                </div>
+                <span class="habilidades__text">Jv.Script</span>
+              </div>
+
+              <div class='habilidades__card'>
+                <div class="habilidades__icon">
+                  <img src='icons/git.svg' alt='html'>
+                </div>
+                <span class="habilidades__text">Git</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="habilidades__subtitle">Habilidades pasivas</h3>
+
+              <ul class='habilidades__list'>
+                <li class='habilidades__item'>
+                  <i class='bx bx-check'></i>
+                  <span class="habilidades__pasivas">Trabajo en equipo</span>
+                </li>
+                <li class='habilidades__item'>
+                  <i class='bx bx-check'></i>
+                  <span class="habilidades__pasivas">Adaptabilidad</span>
+                </li>
+                <li class='habilidades__item'>
+                  <i class='bx bx-check'></i>
+                  <span class="habilidades__pasivas">Resolución de problemas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      </section>
+      <section id='projects' class="section projects">
+        <div class='container'>
+          <h2 class='section section__title'>Proyectos</h2>
+
+          <div class='projects__container'>
+            <div class='projects__card'>
+              <div class='project__img-container'>
+                <img src='https://enclaveinformatico.com/wp-content/uploads/2020/05/Portada.jpeg' alt='project1' class='projects__img'>
+
+                <div class="projects__links">
+                  <a href='#'>Ver Código</a>
+                  <a href='#'>Ver Proyecto</a>
+                </div>
+              </div>
+              <div class='projects__content'>
+                <h3 class='projects__title'>Proyecto Web</h3>
+                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+              </div>
+            </div>
+
+            <div class='projects__card'>
+              <div class='project__img-container'>
+                <img src='https://concepto.de/wp-content/uploads/2014/10/proyecto-e1551127430285-800x412.jpg' alt='project2' class='projects__img'>
+
+                <div class="projects__links">
+                  <a href='#'>Ver Código</a>
+                  <a href='#'>Ver Proyecto</a>
+                </div>
+              </div>
+              <div class='projects__content'>
+                <h3 class='projects__title'>Proyecto 2</h3>
+                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+              </div>
+            </div>
+
+            <div class='projects__card'>
+              <div class='project__img-container'>
+                <img src='https://img.freepik.com/vector-premium/codigo-programador-joven-proyectos-clientes-codigo-programa-escritura-desarrollador-vector-plano_530733-1137.jpg?w=996' alt='project2' class='projects__img'>
+
+                <div class="projects__links">
+                  <a href='#'>Ver Código</a>
+                  <a href='#'>Ver Proyecto</a>
+                </div>
+              </div>
+              <div class='projects__content'>
+                <h3 class='projects__title'>Proyecto 3</h3>
+                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+              </div>
+            </div>
+
+            <div class='projects__card'>
+              <div class='project__img-container'>
+                <img src='https://www.lavanguardia.com/files/image_948_465/uploads/2021/07/22/60f9a8620d0cd.jpeg' alt='project4' class='projects__img'>
+
+                <div class="projects__links">
+                  <a href='#'>Ver Código</a>
+                  <a href='#'>Ver Proyecto</a>
+                </div>
+              </div>
+              <div class='projects__content'>
+                <h3 class='projects__title'>Proyecto 4</h3>
+                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section id="contact" class="section contact">
+        <div id="container">
+          <h2 class="section section__title">Contacto</h2>
+          <div class='contact__content'>
+            <p class="contact__text">Si tienen preguntas o recomen no duden en enviarme un correo electrónico.</p>
+
+            <div class='contact__box'>
+              <a class="contact__link" href='mailto:dvanegasf2023@gmail.com'>
+                <i class="bx bxs-envelope"></i>
+                <p>dvanegasf2023@gmail.com</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class='container footer__container'>
+        <p class="footer__copy">Copyright © 2024 Thales.
+          Todos los derechos reservados.</p>
+
+        <ul class='social footer__social'>
+          <li class='social__item'>
+            <a href='#' class='social__link' aria-label="linkedin">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+          </li>
+          <li class='social__item'>
+            <a href='#' class='social__link' aria-label="github">
+              <i class='bx bxl-github'></i>
+            </a>
+          </li>
+          <li class='social__item'>
+            <a href='#' class='social__link' aria-label="twitter">
+              <i class='bx bxl-twitter'></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <!-- Javascript-->
-    <script src="index.js"></script>
-          <br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b  r><br><br><br><br><br><br><br>
-
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="script/index.js"></script>
   </body>
 </html>
