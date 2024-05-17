@@ -6,7 +6,7 @@
 ### Hola, soy  **DAVID**
 Este es mi portafolio personal.
 
-![Logo](img/logo.png)
+![Logo](img/Logo.png)
 ![Logo](img/logo_dark.png)
 
 ## Modo Oscuro/Claro
