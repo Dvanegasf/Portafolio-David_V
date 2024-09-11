@@ -16,10 +16,10 @@
         <div id="object" class="object object_show">
             <img id="imgMode" class="img_mode" src="img/dia.jpg" alt="Modo">
         </div>
-        <!--Cambio de idioma no funcional-->
+        <!--Cambio de idioma-->
         <div id="Language" class="language">
-          <button class = "btn btn_languages" aria-label="cambiar_idioma">
-            <a href="indexEN.html">ENG</a></button>
+          <button class = "btn btn_languages" aria-label="cambiar_idioma" onclick="window.location.href='indexEN.html';">
+            EN</button>
         </div>
         <!-- Logo -->
         <div>  
@@ -55,7 +55,7 @@
                 <a href="#contact" class="menu__link">Contacto</a>
               </li>
             </ul>
-            <a href="#" class="btn btn_resumen">RESUMEN</a>
+            <a href="#" download="Cv_ats.pdf" class="btn btn_resumen">RESUMEN  <i class='bx bx-download'></i></a>
         </div>
         <button type="button" id="btnAbrir" class = "btn btn_abrir" aria-label="Abrir">
           <i class='bx bx-chevron-right'></i>
@@ -79,18 +79,13 @@
 
             <ul class='social'>
               <li class='social__item'>
-                <a href='#' class='social__link' aria-label="linkedin">
+                <a href='https://www.linkedin.com/in/david-vanegas-fonseca-1a2489213/' target="_blank" class='social__link' aria-label="linkedin">
                   <i class='bx bxl-linkedin'></i>
                 </a>
               </li>
               <li class='social__item'>
-                <a href='#' class='social__link' aria-label="github">
+                <a href='https://github.com/Dvanegasf' target="_blank" class='social__link' aria-label="github">
                   <i class='bx bxl-github'></i>
-                </a>
-              </li>
-              <li class='social__item'>
-                <a href='#' class='social__link' aria-label="twitter">
-                  <i class='bx bxl-twitter'></i>
                 </a>
               </li>
             </ul>
@@ -104,9 +99,12 @@
           <h2 class="section section__title">Sobre mi</h2>
           <div class='about__content'>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi incidunt, alias facere mollitia excepturi distinctio non eius beatae quia tenetur illum neque tempore reprehenderit molestiae nisi! Magnam eaque eos ducimus?</p>
-
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint, eum consequatur eveniet eligendi enim accusantium, dolore ullam numquam ipsa iusto voluptas amet veritatis corporis dolores beatae quam ex quos.</p>
+              ¡Hola!
+              Mi nombre es David Vaneagas Fonseca soy colombiano, tengo 19 años
+            </p>
+            <p>
+                Soy un programador entusiasta con un profundo amor por el campo de la tecnología. Me apasiona explorar nuevas herramientas, resolver problemas complejos y crear soluciones. Mi objetivo es aplicar mis habilidades y conocimientos para desarrollar proyectos impactantes y seguir aprendiendo en un entorno desafiante.
+            </p>
           </div>
         </div>
       </section>
@@ -117,33 +115,55 @@
 
           <div class='habilidades__content'>
             <div class="habilidades__container">
+
               <div class='habilidades__card'>
-                <div class="habilidades__icon">
-                  <img src='icons/html.svg' alt='html'>
-                </div>
+              
+                  <img class="imgs" src='icons/html.svg' alt='html'>
+              
                 <span class="habilidades__text">HTML</span>
               </div>
+
               <div class='habilidades__card'>
-                <div class="habilidades__icon">
-                  <img src='icons/css.svg' alt='html'>
-                </div>
+                  <img class="imgs" src='icons/css.svg' alt='html'> 
                 <span class="habilidades__text">CSS</span>
               </div>
 
               <div class='habilidades__card'>
-                <div class="habilidades__icon">
-                  <img src='icons/javascript.svg' alt='html'>
-                </div>
+              
+                  <img class="imgs" src='icons/javascript.svg' alt='html'>
+              
                 <span class="habilidades__text">Jv.Script</span>
               </div>
 
               <div class='habilidades__card'>
-                <div class="habilidades__icon">
-                  <img src='icons/git.svg' alt='html'>
-                </div>
+              
+                  <img class="imgs" src='icons/git.svg' alt='html'>
+              
                 <span class="habilidades__text">Git</span>
               </div>
+
+              <div class='habilidades__card'>
+              
+                  <img class="imgs" src='icons/react.svg' alt='html'>
+              
+                <span class="habilidades__text">react</span>
+              </div>
+
+              <div class='habilidades__card'>
+              
+                  <img class="imgs" src='icons/postman.svg' alt='html'>
+              
+                <span class="habilidades__text">post</span>
+              </div>
+              
+              <div class='habilidades__card'>
+              
+                  <img class="imgs" src='icons/nodejs.svg' alt='html'>
+              
+                <span class="habilidades__text">nodejs</span>
+              </div>
             </div>
+          </div>
 
             <div>
               <h3 class="habilidades__subtitle">Habilidades pasivas</h3>
@@ -174,61 +194,63 @@
           <div class='projects__container'>
             <div class='projects__card'>
               <div class='project__img-container'>
-                <img src='https://enclaveinformatico.com/wp-content/uploads/2020/05/Portada.jpeg' alt='project1' class='projects__img'>
+                <img src='/img/proyecto1.png' alt='project1' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='#'>Ver Código</a>
-                  <a href='#'>Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/pokedex' target="_blank">Ver Código</a>
+                  <a href='https://pokedexdva.netlify.app' target="_blank">Ver Proyecto</a>
                 </div>
               </div>
               <div class='projects__content'>
-                <h3 class='projects__title'>Proyecto Web</h3>
-                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+                <h3 class='projects__title'>Pokedex </h3>
+                <p class='projects__text'>Aqui puedes ver todos los pokemones exsitentes en orden nacional</p>
               </div>
             </div>
 
             <div class='projects__card'>
               <div class='project__img-container'>
-                <img src='https://concepto.de/wp-content/uploads/2014/10/proyecto-e1551127430285-800x412.jpg' alt='project2' class='projects__img'>
+                <img src='/img/proyecto2.png' alt='project2' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='#'>Ver Código</a>
-                  <a href='#'>Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/Rick_y_Morty_Dvanegas' target="_blank">Ver Código</a>
+                  <a href='https://rickymortydvanegas.netlify.app' target="_blank">Ver Proyecto</a>
                 </div>
               </div>
               <div class='projects__content'>
-                <h3 class='projects__title'>Proyecto 2</h3>
-                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+                <h3 class='projects__title'>Rick and morty</h3>
+                <p class='projects__text'>Aqui podemos buscar cada 'tierra y/o universo' de la serie rick y morty</p>
               </div>
             </div>
 
             <div class='projects__card'>
               <div class='project__img-container'>
-                <img src='https://img.freepik.com/vector-premium/codigo-programador-joven-proyectos-clientes-codigo-programa-escritura-desarrollador-vector-plano_530733-1137.jpg?w=996' alt='project2' class='projects__img'>
+                <img src='/img/proyecto3.png' alt='project2' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='#'>Ver Código</a>
-                  <a href='#'>Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/movies' target="_blank" >Ver Código</a>
+                  <a href='https://documenter.getpostman.com/view/37160799/2sA3rxqDTL' target="_blank" >Ver Proyecto</a>
                 </div>
               </div>
               <div class='projects__content'>
-                <h3 class='projects__title'>Proyecto 3</h3>
-                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+                <h3 class='projects__title'>Api de movies</h3>
+                <p class='projects__text'>Aqui podemos ver el el crud de peliculas donde se pueden insertar peliculas</p>
               </div>
             </div>
 
             <div class='projects__card'>
               <div class='project__img-container'>
-                <img src='https://www.lavanguardia.com/files/image_948_465/uploads/2021/07/22/60f9a8620d0cd.jpeg' alt='project4' class='projects__img'>
+                <img src='/img/proyecto4.png' alt='project4' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='#'>Ver Código</a>
-                  <a href='#'>Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/wether' target="_blank">Ver Código</a>
+                  <a href='https://weatherdvf.netlify.app' target="_blank">Ver Proyecto</a>
                 </div>
               </div>
               <div class='projects__content'>
-                <h3 class='projects__title'>Proyecto 4</h3>
-                <p class='projects__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+                <h3 class='projects__title'>Wether</h3>
+                <p class='projects__text'>
+                  Aqui puedes ver el clima de tu zona
+                </p>
               </div>
             </div>
           </div>
@@ -256,18 +278,13 @@
 
         <ul class='social footer__social'>
           <li class='social__item'>
-            <a href='#' class='social__link' aria-label="linkedin">
+            <a href='https://www.linkedin.com/in/david-vanegas-fonseca-1a2489213/' target="_blank" class='social__link' aria-label="linkedin">
               <i class='bx bxl-linkedin'></i>
             </a>
           </li>
           <li class='social__item'>
-            <a href='#' class='social__link' aria-label="github">
+            <a href='https://github.com/Dvanegasf' target="_blank" class='social__link' aria-label="github">
               <i class='bx bxl-github'></i>
-            </a>
-          </li>
-          <li class='social__item'>
-            <a href='#' class='social__link' aria-label="twitter">
-              <i class='bx bxl-twitter'></i>
             </a>
           </li>
         </ul>
