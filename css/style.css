@@ -6,10 +6,10 @@
     --color-spc:#000;
     --bac-pro: #00b7ffcc;
     --header-height: 60px;
-    --bg-body: #faacac;
+    --bg-body: rgb(209, 207, 207);
     --txt-body: #000000;
-    --bg-nav: #fff;
-    --color-primary: #fe7777;
+    --bg-nav: #d2d2d2;
+    --color-primary: #d2d2d2;
     --btn-color: #000;
     --hea-bac: linear-gradient(to right, #399dc5, #60bbdf);
     --btn-ab-menu:linear-gradient(to right, #0b3eca, #60bbdfc4);
@@ -28,7 +28,7 @@ body.dark {
     --bg-nav: #2e0000;
     --color-primary: #399dc5;
     --btn-color: #ebd8d8;
-    --hea-bac: linear-gradient(to right, #2b5464, #2a6d88);
+    --hea-bac: linear-gradient(to right, #041c5e, #3a6e83);
     --btn-ab-menu:linear-gradient(to right, #0640e0fa, #22424ec4);
     --menu:linear-gradient(to right, #041c5e98, #3a6e83);
     }
@@ -117,6 +117,7 @@ body{
 .nav {
     height: 60px;
     display: flex;
+    margin-left: 20%;
     justify-content: space-between;
     align-items: center;
 }
@@ -127,7 +128,7 @@ body{
 /* ******************* MENU **************** */
 .menu {
     display: flex;
-    background: var(--hea-bac);
+    background: var(--menu);
     flex-direction: column;
     position: fixed;
     justify-content: space-evenly;  
@@ -135,14 +136,13 @@ body{
     right: 0;
     left: 0;
     bottom: 0;
-    width: 22%;
+    width: 20%;
     align-items: flex-start;
-    box-shadow: 1px 2px 10px var(--txt-body);
+    box-shadow: 1px 2px 20px var(--txt-body);
     overflow-y: auto; 
-    overflow: hidden;
   }
   .menu__info{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--txt-body);
     padding: 15% 0;
 
   }
@@ -179,16 +179,19 @@ body{
     width: min-content;
     text-decoration-style: double;
     font-size: 1.25rem;
-
+  bottom: auto;
 }
 .btn_resumen:hover {
     color: var(--bg-nav);
     transition: .5s;
 }
 .img_mode {
-    position: fixed; 
-    width: 22%;
-    top: -10px; 
+    position: absolute;
+    width: 20%;
+    height: 60px;
+    top: 0px; 
+    left: 0;
+    z-index: 1;
 }
 .hero {
   background-image: var(--hr-br);
@@ -198,10 +201,10 @@ body{
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
-  margin-left: auto;
+  margin-left: 19%;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 81%;
 }
 .hero_img {
     height: 25vh;
@@ -303,7 +306,7 @@ body{
   .social {
     list-style: none;
     padding: 0;
-    margin: 30px 0;
+    margin: 0px 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -326,9 +329,19 @@ body{
     color: var(--color-primary);
   }
   /* sobre mi */
-.section{
-  border-bottom: 1px solid var(--btn-color);
-}
+  .section {
+    position: relative;
+    border-bottom: none;
+  }
+  
+  .section::after {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 45%;
+    height: 1px; 
+    background-color: var(--btn-color);
+  }
 .about__content p {
     margin-left: 24%;
     font-size: 2.5rem;
@@ -497,21 +510,27 @@ body{
     border-left: 2px solid var(--btn-color);
     padding-left: 10px;
 }
-.footer__container {
+
+.footer{
+    font-weight: 900;
+    font-size: 120%;
+    color: var(--txt-body);
+    justify-content: right;
+  }
+  .footer__container {
+    position: relative;
     margin-left: 20%;
+    margin-right: 0;
+    right: 0;
     border-top: 1px solid var(--btn-color);
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
 }
-
-.footer{
-    font-weight: 900;
-    font-size: 120%;
-    margin-left: 3%;
-    color: var(--txt-body);
+.footer__social{
+  width: min-content;
 }
 
 .hidden {
@@ -633,6 +652,7 @@ body{
         font-size: 50px;
       }
     .hero {
+      margin: 0;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -768,7 +788,16 @@ body{
     overflow: hidden;
   }
   
+  .projects__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto;
+    gap: 20px; 
+}
   .project__img-container {
+    margin: 0;
     position: relative;
     width: 100%;
     height: 200px;
@@ -812,9 +841,7 @@ body{
     opacity: 1;
   }
   
-  .projects__content {
-    padding: 20px;
-  }
+  
 /* contacto */
     .contact__content {
         padding-top: 20px;
@@ -878,7 +905,8 @@ body{
     color: var(--btn-color);
 }
   .projects__container {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 30px;
   }
@@ -888,7 +916,6 @@ body{
     border-radius: 10px;
     overflow: hidden;
   }
-  
   .project__img-container {
     position: relative;
     width: 100%;
