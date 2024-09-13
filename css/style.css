@@ -97,9 +97,14 @@ body{
     color: var(--bg-nav);
     transition: .5s;
 }
+.btn_mode {
+  transition: transform 0.3s;
+  display: inline-block;
+}
 .btn_mode:hover {
     color: var(--btn-color);
-    transform: rotate(180deg)
+    transform:  rotate(180deg);
+    transform-origin: center center;
 }
 .main {
     overflow: hidden;
@@ -537,6 +542,9 @@ body{
     display: none;
 }
 @media (max-width: 900px) {
+  .nav{
+    margin: 0;
+  }
     .menu {
         border-top-right-radius: 90%;
         background: var(--menu);

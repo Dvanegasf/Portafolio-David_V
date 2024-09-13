@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,15 @@
     </head>
   <body class="dark">
     <header class="header">
-      <nav class="nav contenedor">
-        <!-- Esta es una representacion, si tiene el modo oscuro(se respresenta con una img de la noche) o si tiene el modo claro (se representa con una img de el dia) -->
-        <div id="object" class="object object_show">
-            <img id="imgMode" class="img_mode" src="img/dia.jpg" alt="Modo">
-        </div>
-        <!--Cambio de idioma-->
+      <!-- Here’s a representation: if dark mode is enabled (represented by a night image) or if light mode is enabled (represented by a day image).-->
+      <div id="object" class="object object_show">
+          <img id="imgMode" class="img_mode" src="img/dia.jpg" alt="Modo">
+      </div>
+      <nav class="nav">
+        <!--change languaje-->
         <div id="Language" class="language">
           <button class = "btn btn_languages" aria-label="cambiar_idioma" onclick="window.location.href='index.html';">
-            EN</button>
+            ES</button>
         </div>
         <!-- Logo -->
         <div>  
@@ -27,7 +27,7 @@
             <img id="imglogo" class="img_logo" src="img/logo_dark.png" alt="MI LOGO">
           </a>    
         </div>
-        <!-- modo oscuro / claro -->
+        <!-- mode dark / light -->
         <div id="modes" class="modes">
           <button id="btnMode" class = "btn btn_mode" aria-label="cambiar_modo">
           <i class='bx bxs-yin-yang'></i>
@@ -40,22 +40,22 @@
           </button>
             <ul class="menu__lista">
               <li class="menu__info">
-                <a href="#hero" class="menu__link activo">Inicio</a>
+                <a href="#hero" class="menu__link activo">Home</a>
               </li>
               <li class="menu__info">
-                <a href="#sobre_Mi" class="menu__link">Sobre mi</a>
+                <a href="#sobre_Mi" class="menu__link">About</a>
               </li>                    
               <li class="menu__info">
-                <a href="#habilidades" class="menu__link">Habilidades</a>
+                <a href="#habilidades" class="menu__link">Skills</a>
               </li>
               <li class="menu__info">
-                <a href="#projects" class="menu__link">Proyectos</a>
+                <a href="#projects" class="menu__link">Projects</a>
               </li>
               <li class="menu__info">
-                <a href="#contact" class="menu__link">Contacto</a>
+                <a href="#contact" class="menu__link">Contact</a>
               </li>
             </ul>
-            <a href="#" download="Cv_ats.pdf" class="btn btn_resumen">RESUMEN  <i class='bx bx-download'></i></a>
+            <a href="/resume/CV.pdf" download  class="btn btn_resumen">RESUME <i class='bx bx-download'></i></a>
         </div>
         <button type="button" id="btnAbrir" class = "btn btn_abrir" aria-label="Abrir">
           <i class='bx bx-chevron-right'></i>
@@ -70,7 +70,7 @@
           <img src='img/profile.jpg' class="hero_img" alt='profile'>
         </div>
         <div class="hero__content-body">
-          <h1 class="hero__title">Hola, <span class="hero__animation">👋🏻</span> soy <br> <span class="hero__name">DAVID</span></h1>
+          <h1 class="hero__title">Hi, <span class="hero__animation">👋🏻</span> i am <br> <span class="hero__name">DAVID VANEGAS</span></h1>
         </div>
 
             <p class="hero__description">
@@ -96,14 +96,20 @@
       </section>
       <section id="sobre_Mi" class="section sobre_Mi">
         <div id="contenedor">
-          <h2 class="section section__title">Sobre mi</h2>
+          <h2 class="section section__title">About</h2>
           <div class='about__content'>
             <p>
-              ¡Hola!
-              Mi nombre es David Vaneagas Fonseca soy colombiano, tengo 19 años
+              "Hello!
+              My name is David Vaneagas Fonseca, I'm Colombian, and I'm 19 years old."
             </p>
             <p>
-                Soy un programador entusiasta con un profundo amor por el campo de la tecnología. Me apasiona explorar nuevas herramientas, resolver problemas complejos y crear soluciones. Mi objetivo es aplicar mis habilidades y conocimientos para desarrollar proyectos impactantes y seguir aprendiendo en un entorno desafiante.
+              I am an enthusiastic programmer with a deep love for the field of technology. I am passionate about exploring new tools, solving complex problems, and creating solutions. My goal is to apply my skills and knowledge to develop impactful projects and continue learning in a challenging environment.
+            </p>
+            <p >
+              "Programming is the art of creating something out of nothing." 
+              <p>
+                ~Jhon carmak
+              </p>
             </p>
           </div>
         </div>
@@ -111,7 +117,7 @@
 
       <section id="habilidades"class="section habilidades">
         <div class="contenedor">
-          <h2 class="section section__title">Habilidades</h2>
+          <h2 class="section section__title">Skills</h2>
 
           <div class='habilidades__content'>
             <div class="habilidades__container">
@@ -166,20 +172,20 @@
           </div>
 
             <div>
-              <h3 class="habilidades__subtitle">Habilidades pasivas</h3>
+              <h3 class="habilidades__subtitle">Soft skills</h3>
 
               <ul class='habilidades__list'>
                 <li class='habilidades__item'>
                   <i class='bx bx-check'></i>
-                  <span class="habilidades__pasivas">Trabajo en equipo</span>
+                  <span class="habilidades__pasivas">team work</span>
                 </li>
                 <li class='habilidades__item'>
                   <i class='bx bx-check'></i>
-                  <span class="habilidades__pasivas">Adaptabilidad</span>
+                  <span class="habilidades__pasivas">Adaptability</span>
                 </li>
                 <li class='habilidades__item'>
                   <i class='bx bx-check'></i>
-                  <span class="habilidades__pasivas">Resolución de problemas</span>
+                  <span class="habilidades__pasivas">Problem-solving</span>
                 </li>
               </ul>
             </div>
@@ -189,7 +195,7 @@
       </section>
       <section id='projects' class="section projects">
         <div class='container'>
-          <h2 class='section section__title'>Proyectos</h2>
+          <h2 class='section section__title'>Projects</h2>
 
           <div class='projects__container'>
             <div class='projects__card'>
@@ -197,13 +203,13 @@
                 <img src='/img/proyecto1.png' alt='project1' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='https://github.com/Dvanegasf/pokedex' target="_blank">Ver Código</a>
-                  <a href='https://pokedexdva.netlify.app' target="_blank">Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/pokedex' target="_blank">see code</a>
+                  <a href='https://pokedexdva.netlify.app' target="_blank">see Project</a>
                 </div>
               </div>
               <div class='projects__content'>
                 <h3 class='projects__title'>Pokedex </h3>
-                <p class='projects__text'>Aqui puedes ver todos los pokemones exsitentes en orden nacional</p>
+                <p class='projects__text'>Here you can see all the existing Pokémon in national order.</p>
               </div>
             </div>
 
@@ -212,13 +218,13 @@
                 <img src='/img/proyecto2.png' alt='project2' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='https://github.com/Dvanegasf/Rick_y_Morty_Dvanegas' target="_blank">Ver Código</a>
-                  <a href='https://rickymortydvanegas.netlify.app' target="_blank">Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/Rick_y_Morty_Dvanegas' target="_blank">see code</a>
+                  <a href='https://rickymortydvanegas.netlify.app' target="_blank">see project</a>
                 </div>
               </div>
               <div class='projects__content'>
                 <h3 class='projects__title'>Rick and morty</h3>
-                <p class='projects__text'>Aqui podemos buscar cada 'tierra y/o universo' de la serie rick y morty</p>
+                <p class='projects__text'>Here we can search for each 'dimension and/or universe' from the Rick and Morty series.</p>
               </div>
             </div>
 
@@ -227,13 +233,13 @@
                 <img src='/img/proyecto3.png' alt='project2' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='https://github.com/Dvanegasf/movies' target="_blank" >Ver Código</a>
-                  <a href='https://documenter.getpostman.com/view/37160799/2sA3rxqDTL' target="_blank" >Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/movies' target="_blank" >see code</a>
+                  <a href='https://documenter.getpostman.com/view/37160799/2sA3rxqDTL' target="_blank" >see project</a>
                 </div>
               </div>
               <div class='projects__content'>
-                <h3 class='projects__title'>Api de movies</h3>
-                <p class='projects__text'>Aqui podemos ver el el crud de peliculas donde se pueden insertar peliculas</p>
+                <h3 class='projects__title'>Api movies</h3>
+                <p class='projects__text'>Here we can see the CRUD for movies where you can insert movies.</p>
               </div>
             </div>
 
@@ -242,14 +248,14 @@
                 <img src='/img/proyecto4.png' alt='project4' class='projects__img'>
 
                 <div class="projects__links">
-                  <a href='https://github.com/Dvanegasf/wether' target="_blank">Ver Código</a>
-                  <a href='https://weatherdvf.netlify.app' target="_blank">Ver Proyecto</a>
+                  <a href='https://github.com/Dvanegasf/wether' target="_blank">see code</a>
+                  <a href='https://weatherdvf.netlify.app' target="_blank">see project</a>
                 </div>
               </div>
               <div class='projects__content'>
                 <h3 class='projects__title'>Wether</h3>
                 <p class='projects__text'>
-                  Aqui puedes ver el clima de tu zona
+                  Here you can see the weather for your area.
                 </p>
               </div>
             </div>
@@ -257,9 +263,9 @@
       </section>
       <section id="contact" class="section contact">
         <div id="container">
-          <h2 class="section section__title">Contacto</h2>
+          <h2 class="section section__title">Contact</h2>
           <div class='contact__content'>
-            <p class="contact__text">Si tienen preguntas o recomendaciones no duden en enviarme un correo electrónico.</p>
+            <p class="contact__text">If you have any questions or recommendations, feel free to send me an email.</p>
 
             <div class='contact__box'>
               <a class="contact__link" href='mailto:dvanegasf2023@gmail.com'>
@@ -274,7 +280,7 @@
     <footer class="footer">
       <div class='container footer__container'>
         <p class="footer__copy">Copyright © 2024 David.
-          Todos los derechos reservados.</p>
+          All rights reserved.</p>
 
         <ul class='social footer__social'>
           <li class='social__item'>

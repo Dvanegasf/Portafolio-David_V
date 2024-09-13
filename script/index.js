@@ -62,13 +62,23 @@ btnMode.addEventListener("click", function(){
     }
 })
 /* ********************************* TYPING ********************************* */
-var typed = new Typed('#typing', {
-  strings: ['Desarrollador Web', 'Diseñador', 'Desarrollador de videojuegos'],
-  typeSpeed: 50,
-  backSpeed: 50,
-  startDelay: 25,
-  loop: true,
-  loopCount: Infinity,
-  cursorChar: '_',
-})
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = document.documentElement.lang;
 
+  let strings;
+  if (lang === 'en') {
+    strings = ['Web Developer', 'Designer', 'Game Developer'];
+  } else {
+    strings = ['Desarrollador Web', 'Diseñador', 'Desarrollador de videojuegos'];
+  }
+
+  const typed = new Typed('#typing', {
+    strings: strings,
+    typeSpeed: 50,
+    backSpeed: 50,
+    startDelay: 25,
+    loop: true,
+    loopCount: Infinity,
+    cursorChar: '/',
+  });
+});
