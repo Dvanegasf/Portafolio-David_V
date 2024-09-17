@@ -388,11 +388,17 @@ body{
     flex-direction: column;
     gap: 40px;
   }
-  
-.habilidades__list {
-    list-style: none;
-    padding: 0px;
+  .habilidades__item{
+    display: flex;
+    flex-direction: row;
   }
+.habilidades__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0px;
+}
+
   .habilidades__subtitle{
     margin-left: 25%;
     font-size: 250%;
@@ -408,6 +414,7 @@ body{
   .habilidades__pasivas{
     font-weight: 900;
     font-size: 200%;
+    align-self: center;
     color: var(--txt-body);
   }
 
