@@ -21,25 +21,27 @@
   --header-height: 64px;
   --radius: 12px;
   --transition: 0.2s ease;
+  --bg-menu: white
 }
 
 body.dark {
   --bg: #0f172a;
   --bg-card: #1e293b;
   --bg-nav: #0f172a;
-
+  
   --txt: #f1f5f9;
   --txt-muted: #94a3b8;
   --txt-nav: #f1f5f9;
   --txt-btn: #ffffff;
-
+  
   --border: #1e293b;
   --shadow: 0 1px 3px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --bg-menu: black
 }
 
 /* ══════════════════════════════════════
-   RESET & BASE
+RESET & BASE
 ══════════════════════════════════════ */
 html {
   font-size: 16px;
@@ -373,17 +375,22 @@ body {
 
 .about__content {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 16px;
-  max-width: 680px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 10px ;
 }
 
 .about__content p {
   font-size: 1rem;
+  flex-wrap: wrap;
+  width: 95%;
   color: var(--txt-muted);
   margin: 0;
   line-height: 1.8;
+  text-align: center;
+
 }
 
 /* ══════════════════════════════════════
@@ -642,10 +649,14 @@ body {
    MOBILE
 ══════════════════════════════════════ */
 @media (max-width: 768px) {
+  .nav{
+    flex-direction: row-reverse;
+    align-items: center;
+  }
   .menu {
     display: flex;
-    flex-direction: column;
     position: fixed;
+    flex-direction: column;
     top: var(--header-height);
     left: 0;
     right: 0;
@@ -676,6 +687,8 @@ body {
     font-size: 1.1rem;
     display: block;
     padding: 12px 16px;
+    background-color: var(--bg-menu);
+    opacity: 0.8;
   }
 
   .btn_resumen {
@@ -686,9 +699,8 @@ body {
 
   .btn_abrir {
     display: flex;
-    position: fixed;
-    bottom: 20px;
-    left: 16px;
+    position: relative;
+    left: -5px;
     width: 48px;
     height: 48px;
     background: var(--accent);
@@ -705,7 +717,7 @@ body {
   }
 
   .btn_abrir.hidden {
-    left: -60px;
+    left: -80px;
   }
 
   .btn_abrir:hover {
